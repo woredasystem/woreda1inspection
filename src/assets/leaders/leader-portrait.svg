@@ -1,0 +1,15 @@
+<svg width="260" height="320" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="portraitGradient" x1="0" y1="0" x2="260" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B2740" />
+      <stop offset="100%" stop-color="#244C6D" />
+    </linearGradient>
+  </defs>
+  <rect width="260" height="320" rx="28" fill="url(#portraitGradient)" />
+  <circle cx="130" cy="120" r="60" fill="#F1F2F3" />
+  <circle cx="130" cy="118" r="52" fill="#0C395B" opacity="0.25" />
+  <rect x="70" y="200" width="120" height="80" rx="20" fill="#E6EBF2" />
+  <rect x="90" y="210" width="80" height="40" rx="14" fill="#0C395B" />
+</svg>
+
+

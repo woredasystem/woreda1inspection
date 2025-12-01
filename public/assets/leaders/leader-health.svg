@@ -1,0 +1,15 @@
+<svg width="250" height="310" viewBox="0 0 250 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="healthGradient" x1="0" y1="0" x2="250" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#08213A" />
+      <stop offset="100%" stop-color="#1D4B73" />
+    </linearGradient>
+  </defs>
+  <rect width="250" height="310" rx="30" fill="url(#healthGradient)" />
+  <circle cx="125" cy="120" r="58" fill="#FDFDFD" />
+  <circle cx="125" cy="120" r="50" fill="#0C3251" opacity="0.4" />
+  <rect x="80" y="195" width="90" height="80" rx="20" fill="#D1D9E5" />
+  <rect x="100" y="210" width="50" height="40" rx="14" fill="#08213A" />
+  <rect x="90" y="260" width="70" height="14" rx="7" fill="#F1F2F3" />
+</svg>
+

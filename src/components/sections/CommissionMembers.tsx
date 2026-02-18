@@ -21,10 +21,11 @@ export function CommissionMembers({ categories }: CommissionMembersProps) {
     // Map category IDs to translation keys
     const getCategoryTitle = (categoryId: string) => {
         const titleMap: Record<string, string> = {
-            "commission-committee": t('leaders.commissionCommittee'),
-            "management": t('leaders.managementMembers'),
-            "work-leadership": t('leaders.workLeadership'),
-            "monitoring-committees": t('leaders.monitoringCommittees'),
+            "commission-chair": t('leaders.catCommissionChair'),
+            "commission-deputy": t('leaders.catCommissionDeputy'),
+            "commission-secretary": t('leaders.catCommissionSecretary'),
+            "commission-committee-member": t('leaders.catCommissionCommitteeMember'),
+            "commission-management": t('leaders.catCommissionManagement'),
         };
         return titleMap[categoryId] || categoryId;
     };
@@ -82,9 +83,6 @@ export function CommissionMembers({ categories }: CommissionMembersProps) {
                                 <div className="h-10 w-1 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full" />
                                 <div>
                                     <h3 className="text-2xl md:text-3xl font-bold text-slate-900">{getCategoryTitle(category.id)}</h3>
-                                    {category.id === "commission-committee" && (
-                                        <p className="text-sm text-slate-500 mt-1">{t('leaders.commissionCommitteeCount')}</p>
-                                    )}
                                 </div>
                             </div>
 

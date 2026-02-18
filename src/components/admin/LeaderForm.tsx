@@ -26,7 +26,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
     const [previewImage, setPreviewImage] = useState<string | null>(initialData?.photo_url || null);
     const [isDragging, setIsDragging] = useState(false);
     const [activeTab, setActiveTab] = useState<Language>('en');
-    const [category, setCategory] = useState<string>(initialData?.category || 'commission-committee');
+    const [category, setCategory] = useState<string>(initialData?.category || 'commission-chair');
 
     const languages = [
         { id: 'en', label: t('english'), flag: '🇬🇧' },
@@ -35,11 +35,11 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
     ] as const;
 
     const categories = [
-        { id: 'principal', label: t('catPrincipal') },
-        { id: 'commission-committee', label: t('catCommission') },
-        { id: 'management', label: t('catManagement') },
-        { id: 'work-leadership', label: t('catWorkList') },
-        { id: 'monitoring-committees', label: t('catMonitoring') },
+        { id: 'commission-chair', label: t('catCommissionChair') },
+        { id: 'commission-deputy', label: t('catCommissionDeputy') },
+        { id: 'commission-secretary', label: t('catCommissionSecretary') },
+        { id: 'commission-committee-member', label: t('catCommissionCommitteeMember') },
+        { id: 'commission-management', label: t('catCommissionManagement') },
     ];
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -100,7 +100,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
                 if (!initialData) {
                     formRef.current?.reset();
                     setPreviewImage(null);
-                    setCategory('commission-committee');
+                    setCategory('commission-chair');
                 }
             }
 
@@ -290,16 +290,16 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
                 {/* Speech/Message Input - Available for all leaders, displayed on homepage for principal */}
                 <div className={`space-y-2 ${activeTab === 'en' ? 'block' : 'hidden'}`}>
                     <label className="text-sm font-bold text-slate-700 tracking-wide uppercase flex items-center gap-2">
-                        {t('leaderSpeech')} {category === 'principal' && <span className="text-red-400">*</span>}
-                        {category !== 'principal' && <span className="text-xs font-normal text-slate-500">(Only displayed for principal on homepage)</span>}
+                        {t('leaderSpeech')} {category === 'commission-chair' && <span className="text-red-400">*</span>}
+                        {category !== 'commission-chair' && <span className="text-xs font-normal text-slate-500">(Only displayed for chairperson on homepage)</span>}
                     </label>
                     <textarea
                         name="speech"
                         defaultValue={initialData?.speech}
-                        required={category === 'principal'}
+                        required={category === 'commission-chair'}
                         rows={6}
                         className="w-full bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-slate-100 px-5 py-4 text-base font-medium text-slate-700 placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-sm focus:shadow-lg leading-relaxed"
-                        placeholder={category === 'principal' ? "Enter the principal's message..." : "Optional message (only shown for principal)"}
+                        placeholder={category === 'commission-chair' ? "Enter the chairperson's message..." : "Optional message (only shown for chairperson)"}
                     />
                 </div>
                 <div className={`space-y-2 ${activeTab === 'am' ? 'block' : 'hidden'}`}>
@@ -331,7 +331,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
             {/* Image Upload Area */}
             <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700 tracking-wide uppercase flex items-center gap-2">
-                    {t('leaderCategory') === 'principal' ? t('coverImage') : t('photo')}
+                    {category === 'commission-chair' ? t('coverImage') : t('photo')}
                     <HiSparkles className="w-4 h-4 text-yellow-500" />
                 </label>
 

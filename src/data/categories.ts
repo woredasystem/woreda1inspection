@@ -13,7 +13,7 @@ export const documentCategories: DocumentCategory[] = [
   },
   {
     id: "100",
-    label: "የፓርቲ መመሪያዎች",
+    label: " መመሪያዎች",
     subcategories: [
       { id: "110", label: "የዲሲፕሊን መመሪያ", code: "110" },
       { id: "120", label: "የኢንስፔክሽንና የቁጥጥር መመሪያ", code: "120" },
@@ -21,8 +21,8 @@ export const documentCategories: DocumentCategory[] = [
       { id: "140", label: "የአመራር የምዘና መመሪያ", code: "140" },
       { id: "150", label: "የአደረጃጀትና አሰራር መመሪያ", code: "150" },
       { id: "160", label: "የአባላት መዋጮ አሰባሰብ መመሪያ", code: "160" },
-      { id: "170", label: "የፓርቲ አባላት ምልመላ፣ ግንባታና ስንብት መመሪያ", code: "170" },
-      { id: "180", label: "የፓርቲ ሀብቶች መመሪያዎች", code: "180" },
+      { id: "170", label: " አባላት ምልመላ፣ ግንባታና ስንብት መመሪያ", code: "170" },
+      { id: "180", label: " ሀብቶች መመሪያዎች", code: "180" },
       { id: "190", label: "የተተኪና ኮር አመራር ምልመላ መመሪያ", code: "190" },
     ],
   },
@@ -54,7 +54,7 @@ export const documentCategories: DocumentCategory[] = [
       { id: "430", label: "ለኮንፈረንስ የቀረበ ሪፖርት", code: "430" },
       { id: "440", label: "ለኮሚሽን መዋቅር የተላከ ሪፖርት", code: "440" },
       { id: "450", label: "የኢንስፔክሽን ግኝቶች ምክረ-ሃሳብ የግብረ-መልስ ሪፖርት", code: "450" },
-      { id: "460", label: "ለፓርቲ ቅ/ጽ/ቤት የተላከ ሪፖርት", code: "460" },
+      { id: "460", label: " ቅ/ጽ/ቤት የተላከ ሪፖርት", code: "460" },
       { id: "470", label: "ለጉባዔ የቀረበ ሪፖርት", code: "470" },
     ],
   },
@@ -71,12 +71,12 @@ export const documentCategories: DocumentCategory[] = [
     id: "600",
     label: "ግብረ-መልስ",
     subcategories: [
-      { id: "610", label: "ለፓርቲ መዋቅር የተሰጠ የኢንስፔክሽን ግብረ-መልስ", code: "610" },
+      { id: "610", label: " መዋቅር የተሰጠ የኢንስፔክሽን ግብረ-መልስ", code: "610" },
       { id: "620", label: "ለኮሚሽን መዋቅር የተሰጠ የሱፐርቪዥን ግብረ መልስ", code: "620" },
       { id: "630", label: "የእቅድ ግብረ መልስ", code: "630" },
       { id: "640", label: "የሪፖርት ግብረ-መልስ", code: "640" },
       { id: "650", label: "የግምገማ ግብረ-መልስ", code: "650" },
-      { id: "660", label: "ከፓርቲ ጽ/ቤቶች የተሰጠ የግብረ-መልስ ግብረ-መልስ", code: "660" },
+      { id: "660", label: " ጽ/ቤቶች የተሰጠ የግብረ-መልስ ግብረ-መልስ", code: "660" },
     ],
   },
   {
@@ -91,7 +91,7 @@ export const documentCategories: DocumentCategory[] = [
       { id: "760", label: "የማህበራዊ ሚዲያ አጠቃቀም ሰነድ", code: "760" },
       { id: "770", label: "የመግባቢያ ሰነድ እና የጅግጅጋ/አዲስ አበባ ስምምነት", code: "770" },
       { id: "780", label: "የስልጠና/የኦሬንተሽን/የጋራ መድረክ ተሳታፊ አቴንዳንስ", code: "780" },
-      { id: "790", label: "ከፓርቲ ዋና ጽ/ቤትና ለዞኖች/ከተሞች/ልዩ ወረዳ ለወረዳ የተላከ ስራ መመሪያ/ሰርኩላር/", code: "790" },
+      { id: "790", label: " ዋና ጽ/ቤትና ለዞኖች/ከተሞች/ልዩ ወረዳ ለወረዳ የተላከ ስራ መመሪያ/ሰርኩላር/", code: "790" },
     ],
   },
   {
@@ -151,12 +151,12 @@ export const documentCategories: DocumentCategory[] = [
   },
   {
     id: "4000",
-    label: "የፓርቲ ፋይናንስና አስተዳደር",
+    label: " ፋይናንስና አስተዳደር",
     subcategories: [
       { id: "4100", label: "የየሩብ ዓመቱ የውስጥ ኦዲት ሪፖርት", code: "4100" },
       { id: "4200", label: "የውጪ ኦዲት ሪፖርት", code: "4200" },
       { id: "4300", label: "የንብረት ቆጠራ ሪፖርት", code: "4300" },
-      { id: "4400", label: "የፓርቲ ሀብት መረጃዎች", code: "4400" },
+      { id: "4400", label: " ሀብት መረጃዎች", code: "4400" },
       { id: "4500", label: "የፋይናስ ሪፖርት", code: "4500" },
     ],
   },

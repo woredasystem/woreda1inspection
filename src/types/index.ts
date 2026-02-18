@@ -101,7 +101,7 @@ export interface LeaderRecord {
   name_or?: string;
   title_or?: string;
   speech_or?: string;
-  category: 'principal' | 'commission-committee' | 'management' | 'work-leadership' | 'monitoring-committees';
+  category: 'commission-chair' | 'commission-deputy' | 'commission-secretary' | 'commission-committee-member' | 'commission-management';
   sort_order: number;
   photo_url?: string;
   created_at: string;

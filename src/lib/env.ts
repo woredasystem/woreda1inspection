@@ -8,7 +8,7 @@ const ensureEnv = (name: string): string => {
 
 export const publicEnv = {
   NEXT_PUBLIC_WOREDA_ID: process.env.NEXT_PUBLIC_WOREDA_ID ?? "woreda-9",
-  NEXT_PUBLIC_WOREDA_NAME: process.env.NEXT_PUBLIC_WOREDA_NAME ?? "የብልጽግና ፓርቲ የኢንስፔክሽንና የሥነምግባር ኮሚሽን",
+  NEXT_PUBLIC_WOREDA_NAME: process.env.NEXT_PUBLIC_WOREDA_NAME ?? "የብልጽግና  የኢንስፔክሽንና የሥነምግባር ኮሚሽን",
   NEXT_PUBLIC_WOREDA_LOGO_PATH:
     process.env.NEXT_PUBLIC_WOREDA_LOGO_PATH ?? "/logo.jpg",
   NEXT_PUBLIC_WOREDA_IMAGES_PREFIX:

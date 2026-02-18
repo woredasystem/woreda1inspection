@@ -127,9 +127,9 @@ export function LeaderMessagesCarousel({ leaders }: LeaderMessagesCarouselProps)
                                 <span className="relative inline-flex h-3 w-3 rounded-full bg-blue-500" />
                             </span>
                             <span className="text-sm font-bold uppercase tracking-wider">
-                                {currentLeader.category === 'principal' 
-                                    ? t('leaders.administratorMessage')
-                                    : t('hero.leadersMessage')}
+                                {locale === 'am' ? `${getTitle(currentLeader)} መልዕክት` :
+                                    locale === 'or' ? `${getTitle(currentLeader)} Ergaa` :
+                                        `${getTitle(currentLeader)}'s Message`}
                             </span>
                         </div>
                         <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-slate-700 lg:text-3xl">
@@ -146,11 +146,10 @@ export function LeaderMessagesCarousel({ leaders }: LeaderMessagesCarouselProps)
                                     <button
                                         key={index}
                                         onClick={() => setCurrentIndex(index)}
-                                        className={`h-2 rounded-full transition-all ${
-                                            index === currentIndex
+                                        className={`h-2 rounded-full transition-all ${index === currentIndex
                                                 ? 'w-8 bg-blue-600'
                                                 : 'w-2 bg-slate-300 hover:bg-slate-400'
-                                        }`}
+                                            }`}
                                         aria-label={`Go to leader ${index + 1}`}
                                     />
                                 ))}

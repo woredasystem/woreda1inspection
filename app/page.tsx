@@ -24,19 +24,20 @@ export default async function Home() {
         return leader.speech || leader.speech_am || leader.speech_or;
     });
 
-    // Sort: principal first if exists, then by sort_order
+    // Sort: commission-chair first if exists, then by sort_order
     const sortedLeadersWithMessages = leadersWithMessages.sort((a, b) => {
-        if (a.category === 'principal') return -1;
-        if (b.category === 'principal') return 1;
+        if (a.category === 'commission-chair') return -1;
+        if (b.category === 'commission-chair') return 1;
         return a.sort_order - b.sort_order;
     });
 
     // Group leaders by category, maintaining static order of categories we want
     const categoryOrder = [
-        'commission-committee',
-        'management',
-        'work-leadership',
-        'monitoring-committees'
+        'commission-chair',
+        'commission-deputy',
+        'commission-secretary',
+        'commission-committee-member',
+        'commission-management'
     ];
 
     const categories = categoryOrder.map(id => ({

@@ -8,6 +8,8 @@ import { format } from "date-fns";
 import { revalidatePath } from "next/cache";
 import { deleteNewsItem } from "@/lib/news-actions";
 import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
     title: "Admin : News",
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function AdminNewsPage() {
+    const t = await getTranslations('admin');
     const newsList = await getAllNews();
 
     async function deleteNews(formData: FormData) {
@@ -39,7 +42,7 @@ export default async function AdminNewsPage() {
             <section className="space-y-4">
                 <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
                     <HiNewspaper className="w-6 h-6 text-indigo-600" />
-                    Create New Article
+                    {t('createNewArticle')}
                 </h2>
                 <div className="max-w-4xl">
                     <NewsForm />
@@ -50,7 +53,7 @@ export default async function AdminNewsPage() {
 
             {/* List Section */}
             <section className="space-y-4">
-                <h2 className="text-xl font-bold text-slate-800">Existing News ({newsList.length})</h2>
+                <h2 className="text-xl font-bold text-slate-800">{t('existingNews', { count: newsList.length })}</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {newsList.map((item) => (
@@ -71,7 +74,7 @@ export default async function AdminNewsPage() {
                                 )}
                                 {item.published && (
                                     <div className="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                                        <HiCheckCircle className="w-3 h-3" /> Published
+                                        <HiCheckCircle className="w-3 h-3" /> {t('published')}
                                     </div>
                                 )}
                             </div>

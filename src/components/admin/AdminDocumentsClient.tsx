@@ -14,12 +14,14 @@ import {
 import { documentCategories } from "@/data/categories";
 import { motion, AnimatePresence } from "framer-motion";
 import type { DocumentUploadRecord } from "@/types";
+import { useTranslations } from "next-intl";
 
 interface AdminDocumentsClientProps {
     documents: DocumentUploadRecord[];
 }
 
 export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
+    const t = useTranslations('admin');
     const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
     const [expandedSubcategories, setExpandedSubcategories] = useState<Set<string>>(new Set());
     const [deletingId, setDeletingId] = useState<string | null>(null);
@@ -62,7 +64,7 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
     };
 
     const handleDelete = async (documentId: string, fileName: string) => {
-        if (!confirm(`Are you sure you want to delete "${fileName}"? This action cannot be undone.`)) {
+        if (!confirm(`${t('confirmDeleteDocument') || 'Delete'} "${fileName}"?`)) {
             return;
         }
 
@@ -73,14 +75,14 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
             });
 
             if (!response.ok) {
-                throw new Error("Failed to delete document");
+                throw new Error(t('failedToDeleteDocument') || 'Failed to delete document');
             }
 
             // Refresh the page to show updated list
             window.location.reload();
         } catch (error) {
             console.error("Error deleting document:", error);
-            alert("Failed to delete document. Please try again.");
+            alert(t('failedToDeleteDocument') || 'Failed to delete document');
             setDeletingId(null);
         }
     };
@@ -105,11 +107,11 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
 
     const handleBulkDelete = async () => {
         if (selectedDocuments.size === 0) {
-            alert("Please select at least one document to delete.");
+            alert(t('selectAtLeastOneFile'));
             return;
         }
 
-        if (!confirm(`Are you sure you want to delete ${selectedDocuments.size} document(s)? This action cannot be undone.`)) {
+        if (!confirm(`${t('deleteSelected', { count: selectedDocuments.size })}?`)) {
             return;
         }
 
@@ -125,7 +127,7 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
             window.location.reload();
         } catch (error) {
             console.error("Error deleting documents:", error);
-            alert("Failed to delete some documents. Please try again.");
+            alert(t('failedToDeleteDocument') || 'Failed to delete some documents');
             setIsDeleting(false);
         }
     };
@@ -146,7 +148,7 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
                                 onChange={() => { }}
                                 className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
                             />
-                            {selectedDocuments.size === documents.length ? "Deselect All" : "Select All"}
+                            {selectedDocuments.size === documents.length ? t('deselectAll') : t('selectAll')}
                         </button>
 
                         {selectedDocuments.size > 0 && (
@@ -156,12 +158,12 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
                                 className="inline-flex items-center gap-2 rounded-xl bg-red-50 border-2 border-red-200 px-5 py-2.5 text-sm font-bold text-red-600 transition hover:bg-red-100 hover:border-red-300 disabled:opacity-50"
                             >
                                 <HiTrash className="h-4 w-4" />
-                                Delete Selected ({selectedDocuments.size})
+                                {t('deleteSelected', { count: selectedDocuments.size })}
                             </button>
                         )}
 
                         <span className="text-sm font-medium text-slate-500 ml-auto">
-                            {documents.length} total document{documents.length !== 1 ? "s" : ""}
+                            {documents.length} {t('documents')}
                         </span>
                     </div>
                 </section>
@@ -202,7 +204,7 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
                                             {category.id} - {category.label}
                                         </h2>
                                         <p className="mt-1 text-xs font-bold uppercase tracking-widest text-slate-400">
-                                            {totalDocsInCategory} document{totalDocsInCategory !== 1 ? "s" : ""}
+                                            {totalDocsInCategory} {t('documents')}
                                         </p>
                                     </div>
                                 </div>
@@ -242,7 +244,7 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
                                                                         {subcategory.code} – {subcategory.label}
                                                                     </h3>
                                                                     <p className="text-xs font-medium text-slate-500">
-                                                                        {subcategoryDocs.length} file{subcategoryDocs.length !== 1 ? "s" : ""}
+                                                                        {subcategoryDocs.length} {t('documents')}
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -261,13 +263,13 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
                                                                             <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-slate-100">
                                                                                 <HiFolder className="h-6 w-6 text-slate-400" />
                                                                             </div>
-                                                                            <p className="text-sm text-slate-500">No documents in this category yet</p>
+                                                                            <p className="text-sm text-slate-500">{t('noDocumentsCategory') || 'No documents in this category yet'}</p>
                                                                             <Link
                                                                                 href="/admin/upload"
                                                                                 className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700"
                                                                             >
                                                                                 <HiPlus className="h-4 w-4" />
-                                                                                Upload Document
+                                                                                {t('uploadDocument')}
                                                                             </Link>
                                                                         </div>
                                                                     ) : (
@@ -307,7 +309,7 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
                                                                                             title="Download"
                                                                                         >
                                                                                             <HiDocumentArrowDown className="h-4 w-4" />
-                                                                                            <span className="sm:hidden">Download</span>
+                                                                                            <span className="sm:hidden">{t('download') || 'Download'}</span>
                                                                                         </Link>
                                                                                         <button
                                                                                             onClick={() => handleDelete(document.id, document.file_name)}
@@ -316,7 +318,7 @@ export function AdminDocumentsClient({ documents }: AdminDocumentsClientProps) {
                                                                                             title="Delete"
                                                                                         >
                                                                                             <HiTrash className="h-4 w-4" />
-                                                                                            <span className="sm:hidden">{deletingId === document.id ? 'Deleting...' : 'Delete'}</span>
+                                                                                            <span className="sm:hidden">{deletingId === document.id ? (t('uploading') || 'Deleting...') : (t('delete') || 'Delete')}</span>
                                                                                         </button>
                                                                                     </div>
                                                                                 </motion.article>

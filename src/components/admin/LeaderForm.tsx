@@ -291,7 +291,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
                 <div className={`space-y-2 ${activeTab === 'en' ? 'block' : 'hidden'}`}>
                     <label className="text-sm font-bold text-slate-700 tracking-wide uppercase flex items-center gap-2">
                         {t('leaderSpeech')} {category === 'commission-chair' && <span className="text-red-400">*</span>}
-                        {category !== 'commission-chair' && <span className="text-xs font-normal text-slate-500">(Only displayed for chairperson on homepage)</span>}
+                        <span className="text-xs font-normal text-slate-500"> {t('chairpersonMessageHint')}</span>
                     </label>
                     <textarea
                         name="speech"
@@ -299,7 +299,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
                         required={category === 'commission-chair'}
                         rows={6}
                         className="w-full bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-slate-100 px-5 py-4 text-base font-medium text-slate-700 placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-sm focus:shadow-lg leading-relaxed"
-                        placeholder={category === 'commission-chair' ? "Enter the chairperson's message..." : "Optional message (only shown for chairperson)"}
+                        placeholder={category === 'commission-chair' ? t('enterChairpersonMessage') : t('optionalChairpersonMessage')}
                     />
                 </div>
                 <div className={`space-y-2 ${activeTab === 'am' ? 'block' : 'hidden'}`}>
@@ -311,7 +311,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
                         defaultValue={initialData?.speech_am}
                         rows={6}
                         className="w-full bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-slate-100 px-5 py-4 text-base font-medium text-slate-700 placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-sm focus:shadow-lg leading-relaxed"
-                        placeholder="መልዕክት (አማርኛ)"
+                        placeholder={t('leaderSpeechAm')}
                     />
                 </div>
                 <div className={`space-y-2 ${activeTab === 'or' ? 'block' : 'hidden'}`}>
@@ -323,7 +323,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
                         defaultValue={initialData?.speech_or}
                         rows={6}
                         className="w-full bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-slate-100 px-5 py-4 text-base font-medium text-slate-700 placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-sm focus:shadow-lg leading-relaxed"
-                        placeholder="Ergaa (Oromiffa)"
+                        placeholder={t('leaderSpeechOr')}
                     />
                 </div>
             </div>
@@ -394,7 +394,7 @@ export function LeaderForm({ initialData, onSuccess }: LeaderFormProps) {
                     ) : (
                         <>
                             <HiPencilSquare className="w-6 h-6" />
-                            <span>{initialData ? t('updateArticle') : t('leaderCreated')}</span>
+                            <span>{initialData ? t('updateArticle') : t('createMember')}</span>
                         </>
                     )}
                 </button>

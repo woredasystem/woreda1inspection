@@ -4,11 +4,24 @@ import { getAdminLeaders, deleteLeader } from "@/lib/leader-actions";
 import { AdminPageHeader } from "@/components/admin/AdminPageHeader";
 import { HiPlus, HiPencilSquare, HiTrash, HiUser } from "react-icons/hi2";
 import { revalidatePath } from "next/cache";
+import { getTranslations } from "next-intl/server";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminLeadersPage() {
+    const t = await getTranslations('admin');
     const leaders = await getAdminLeaders();
+
+    const getCategoryLabel = (cat: string) => {
+        switch (cat) {
+            case 'commission-chair': return t('catCommissionChair');
+            case 'commission-deputy': return t('catCommissionDeputy');
+            case 'commission-secretary': return t('catCommissionSecretary');
+            case 'commission-committee-member': return t('catCommissionCommitteeMember');
+            case 'commission-management': return t('catCommissionManagement');
+            default: return cat.replace(/-/g, ' ');
+        }
+    };
 
     async function deleteLeaderAction(formData: FormData) {
         "use server";
@@ -29,7 +42,7 @@ export default async function AdminLeadersPage() {
             <div className="flex justify-end">
                 <Link href="/admin/leaders/new" className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-colors shadow-lg hover:shadow-indigo-500/30">
                     <HiPlus className="w-5 h-5" />
-                    Add New Member
+                    {t('createNewLeader')}
                 </Link>
             </div>
 
@@ -50,13 +63,13 @@ export default async function AdminLeadersPage() {
                                 <p className="text-sm opacity-90">{leader.title}</p>
                             </div>
                             <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                {leader.category.replace(/-/g, ' ')}
+                                {getCategoryLabel(leader.category)}
                             </div>
                         </div>
 
                         <div className="p-4 flex items-center justify-between mt-auto bg-slate-50 border-t border-slate-100">
                             <div className="text-xs font-bold text-slate-500">
-                                Order: {leader.sort_order}
+                                {t('sortOrder')}: {leader.sort_order}
                             </div>
 
                             <div className="flex gap-2">
@@ -77,8 +90,8 @@ export default async function AdminLeadersPage() {
                 {leaders.length === 0 && (
                     <div className="col-span-full py-12 text-center text-slate-500 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
                         <HiUser className="w-12 h-12 mx-auto text-slate-400 mb-2" />
-                        <p className="text-lg font-medium">No leaders found</p>
-                        <p className="text-sm">Add a new member to see them here.</p>
+                        <p className="text-lg font-medium">{t('noLeadersFound')}</p>
+                        <p className="text-sm">{t('addMemberToSee')}</p>
                     </div>
                 )}
             </div>

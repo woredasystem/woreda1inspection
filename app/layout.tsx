@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "የአቃቂ ወረዳ 1 ብልፅግና ኢንስፔክሽንና ስነ ምግባር ኮሚሽን",
+  title: "የአቃቂ ቃሊቲ ወረዳ 1 ኮሚሽን ቅ/ፅ/ቤት",
   description:
     "የከተማ ኮሚሽን አመራሮች፣ የሰነድ ቤተ-መዛግብት እና የቀጠሮ አገልግሎት የሚሰጥ ኦፊሴላዊ መድረክ።",
 };

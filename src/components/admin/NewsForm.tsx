@@ -54,15 +54,7 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
             }
 
             if (initialData) {
-                await updateNewsItem(initialData.id, {
-                    title,
-                    summary,
-                    content,
-                    published,
-                    cover_image_url: coverImageUrl,
-                    youtube_url: youtubeUrl || undefined,
-                });
-                setStatus({ type: "success", message: "News updated successfully!" });
+                setStatus({ type: "success", message: t('newsUpdated') });
             } else {
                 await createNewsItem({
                     title,
@@ -72,7 +64,7 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
                     cover_image_url: coverImageUrl,
                     youtube_url: youtubeUrl || undefined,
                 });
-                setStatus({ type: "success", message: "News created successfully!" });
+                setStatus({ type: "success", message: t('newsCreated') });
                 formRef.current?.reset();
                 setPreviewImage(null);
                 setPreviewImages([]);
@@ -86,7 +78,7 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
             console.error(error);
             setStatus({
                 type: "error",
-                message: error instanceof Error ? error.message : "Failed to save news."
+                message: error instanceof Error ? error.message : t('failedToSave')
             });
         } finally {
             setIsSubmitting(false);
@@ -149,7 +141,7 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
                 {/* Title Input */}
                 <div className="space-y-2">
                     <label className="text-sm font-bold text-slate-700 tracking-wide uppercase flex items-center gap-2">
-                        Post Title <span className="text-red-400">*</span>
+                        {t('postTitle')} <span className="text-red-400">*</span>
                     </label>
                     <input
                         type="text"
@@ -157,26 +149,26 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
                         defaultValue={initialData?.title}
                         required
                         className="w-full bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-slate-100 px-5 py-4 text-lg font-bold text-slate-900 placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-sm focus:shadow-lg"
-                        placeholder="Enter an engaging headline..."
+                        placeholder={t('enterHeadline')}
                     />
                 </div>
 
                 {/* Summary Input */}
                 <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 tracking-wide uppercase">Summary</label>
+                    <label className="text-sm font-bold text-slate-700 tracking-wide uppercase">{t('summary')}</label>
                     <textarea
                         name="summary"
                         defaultValue={initialData?.summary}
                         rows={2}
                         className="w-full bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-slate-100 px-5 py-4 text-base font-medium text-slate-700 placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-sm focus:shadow-lg resize-none"
-                        placeholder="A brief teaser for the news card..."
+                        placeholder={t('enterSummary')}
                     />
                 </div>
 
                 {/* Content Input */}
                 <div className="space-y-2">
                     <label className="text-sm font-bold text-slate-700 tracking-wide uppercase flex items-center gap-2">
-                        Content <span className="text-red-400">*</span>
+                        {t('content')} <span className="text-red-400">*</span>
                     </label>
                     <textarea
                         name="content"
@@ -184,7 +176,7 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
                         required
                         rows={8}
                         className="w-full bg-white/50 backdrop-blur-sm rounded-2xl border-2 border-slate-100 px-5 py-4 text-base font-medium text-slate-700 placeholder:text-slate-400 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all shadow-sm focus:shadow-lg leading-relaxed"
-                        placeholder="Write your article here..."
+                        placeholder={t('writeArticle')}
                     />
                 </div>
 
@@ -238,13 +230,13 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
                                 />
                                 {previewImages.length > 1 && (
                                     <div className="absolute top-2 right-2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                                        +{previewImages.length - 1} more
+                                        {t('moreImages', { count: previewImages.length - 1 })}
                                     </div>
                                 )}
                             </div>
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                                 <span className="px-6 py-3 bg-white/20 border border-white/40 rounded-full text-white font-bold backdrop-blur-md shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all">
-                                    {previewImages.length > 1 ? `Change Images (${previewImages.length})` : "Change Image"}
+                                    {previewImages.length > 1 ? t('changeImages', { count: previewImages.length }) : t('changeImage')}
                                 </span>
                             </div>
                         </>
@@ -273,10 +265,10 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
                     </div>
                     <div>
                         <h4 className={`font-bold text-lg ${published ? 'text-green-800' : 'text-slate-700'}`}>
-                            {published ? "Published & Live" : "Draft Mode"}
+                            {published ? t('publishedLive') : t('draftMode')}
                         </h4>
                         <p className="text-sm text-slate-500 font-medium">
-                            {published ? "Visible to everyone on the public site" : "Only visible to admins"}
+                            {published ? t('visiblePublic') : t('visibleAdmin')}
                         </p>
                     </div>
                 </div>
@@ -297,12 +289,12 @@ export function NewsForm({ initialData, onSuccess }: NewsFormProps) {
                     {isSubmitting ? (
                         <>
                             <HiCloudArrowUp className="w-6 h-6 animate-bounce" />
-                            <span>Processing...</span>
+                            <span>{t('processing')}</span>
                         </>
                     ) : (
                         <>
                             <HiPencilSquare className="w-6 h-6" />
-                            <span>{initialData ? "Update Article" : "Publish Article"}</span>
+                            <span>{initialData ? t('updateArticle') : t('publishArticle')}</span>
                         </>
                     )}
                 </button>

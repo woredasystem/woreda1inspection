@@ -234,7 +234,7 @@ export function DashboardClient({
                           : "bg-amber-100 text-amber-700"
                         }`}
                     >
-                      {request.status}
+                      {t(request.status) || request.status}
                     </span>
                   </div>
 

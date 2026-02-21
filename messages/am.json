@@ -9,7 +9,7 @@
         "officialPortal": "ኦፊሴላዊ መግቢያ",
         "authorizedReader": "የተፈቀደ አንባቢ",
         "documents": "ሰነዶች",
-        "temporaryAccessTitle": "የአቃቂ ቃሊቲ ወረዳ 3 ኮሚሽን ቅ/ፅ/ቤት"
+        "temporaryAccessTitle": "የአቃቂ ቃሊቲ ወረዳ 4 ኮሚሽን ቅ/ፅ/ቤት"
     },
     "admin": {
         "secureAdminPortal": "ደህንነት ያለው የአስተዳዳሪ መግቢያ",
@@ -147,11 +147,11 @@
         "leaderCategory": "ምድብ",
         "photo": "ፎቶ",
         "sortOrder": "ቅደም ተከተል",
-        "catCommissionChair": "በአ/ ቃ/ክ/ወረዳ 3/ብ/ኢ/ስ/ ኮሚሽን ሰብሳቢ",
-        "catCommissionDeputy": "በአ/ ቃ/ክ/ወረዳ 3/ብ /ኢ/ስ/ ኮሚሽን ም/ሰብሳቢ",
-        "catCommissionSecretary": "በአ/ ቃ/ክ/ወረዳ 3/ብ/ኢ/ስ/ ኮሚሽን ፀሀፊ",
-        "catCommissionCommitteeMember": "በአ/ ቃ/ክ/ ወረዳ 3/ ብ/ኢ/ስ/ ኮሚሽን ኮሚቴ አባላት",
-        "catCommissionManagement": "በአ/ ቃ/ክ/ወረዳ 3/ ብ/ኢ/ስ/ ኮሚሽን ስራ አመራር አባላት",
+        "catCommissionChair": "በአ/ ቃ/ክ/ወረዳ 4/ብ/ኢ/ስ/ ኮሚሽን ሰብሳቢ",
+        "catCommissionDeputy": "በአ/ ቃ/ክ/ወረዳ 4/ብ /ኢ/ስ/ ኮሚሽን ም/ሰብሳቢ",
+        "catCommissionSecretary": "በአ/ ቃ/ክ/ወረዳ 4/ብ/ኢ/ስ/ ኮሚሽን ፀሀፊ",
+        "catCommissionCommitteeMember": "በአ/ ቃ/ክ/ ወረዳ 4/ ብ/ኢ/ስ/ ኮሚሽን ኮሚቴ አባላት",
+        "catCommissionManagement": "በአ/ ቃ/ክ/ወረዳ 4/ ብ/ኢ/ስ/ ኮሚሽን ስራ አመራር አባላት",
         "leaderSaved": "አባሉ በተሳካ ሁኔታ ተቀምጧል!",
         "leaderUpdated": "አባሉ በተሳካ ሁኔታ ተዘምኗል!",
         "leaderCreated": "አባሉ በተሳካ ሁኔታ ተፈጥሯል!",
@@ -204,25 +204,25 @@
         "leadersMessage": "የመሪዎች መልዕክት",
         "appointment": "ቀጠሮ",
         "subtitleText": "ጠንካራ ኢንስፔክሽን ለጠንካራ ፖርቲ",
-        "mainTitle": "የአቃቂ ቃሊቲ ወረዳ 3 ኮሚሽን ቅ/ፅ/ቤት",
-        "badgeText": "የአቃቂ ቃሊቲ ወረዳ 3 ኮሚሽን"
+        "mainTitle": "የአቃቂ ቃሊቲ ወረዳ 4 ኮሚሽን ቅ/ፅ/ቤት",
+        "badgeText": "የአቃቂ ቃሊቲ ወረዳ 4 ኮሚሽን"
     },
     "leaders": {
         "messageFrom": "ከአስተዳዳሪው መልእክት",
         "leaders": "መሪዎች",
-        "administratorMessage": "የአቃቂ ቃሊቲ ወረዳ 3 ኢንስፔክሽንና የስነምግባር ኮሚሽን ቅ/ፅ/ቤት  ሰብሳቢ  መልዕክት ",
+        "administratorMessage": "የአቃቂ ቃሊቲ ወረዳ 4 ኢንስፔክሽንና የስነምግባር ኮሚሽን ቅ/ፅ/ቤት  ሰብሳቢ  መልዕክት ",
         "administratorPhoto": "የአስተዳዳሪው ፎቶ",
-        "membersSubtitle": "የአቃቂ ቃሊቲ ወረዳ 3 የኢንስፔክሽንና የስነ ምግባር ኮሚሽን ቅርንጫፍ ጽህፈት ቤት አመራር አካላት",
-        "catCommissionChair": "በአ/ ቃ/ክ/ወረዳ 3/ብ/ኢ/ስ/ ኮሚሽን ሰብሳቢ",
-        "catCommissionDeputy": "በአ/ ቃ/ክ/ወረዳ 3/ብ /ኢ/ስ/ ኮሚሽን ም/ሰብሳቢ",
-        "catCommissionSecretary": "በአ/ ቃ/ክ/ወረዳ 3/ብ/ኢ/ስ/ ኮሚሽን ሰብሳቢ ፀሀፊ",
-        "catCommissionCommitteeMember": "በአ/ ቃ/ክ/ ወረዳ 3/ ብ/ኢ/ስ/ ኮሚሽን ኮሚቴ አባላት",
-        "catCommissionManagement": "በአ/ ቃ/ክ/ወረዳ 3/ ብ/ኢ/ስ/ ኮሚሽን ስራ አመራር አባላት",
+        "membersSubtitle": "የአቃቂ ቃሊቲ ወረዳ 4 የኢንስፔክሽንና የስነ ምግባር ኮሚሽን ቅርንጫፍ ጽህፈት ቤት አመራር አካላት",
+        "catCommissionChair": "በአ/ ቃ/ክ/ወረዳ 4/ብ/ኢ/ስ/ ኮሚሽን ሰብሳቢ",
+        "catCommissionDeputy": "በአ/ ቃ/ክ/ወረዳ 4/ብ /ኢ/ስ/ ኮሚሽን ም/ሰብሳቢ",
+        "catCommissionSecretary": "በአ/ ቃ/ክ/ወረዳ 4/ብ/ኢ/ስ/ ኮሚሽን ሰብሳቢ ፀሀፊ",
+        "catCommissionCommitteeMember": "በአ/ ቃ/ክ/ ወረዳ 4/ ብ/ኢ/ስ/ ኮሚሽን ኮሚቴ አባላት",
+        "catCommissionManagement": "በአ/ ቃ/ክ/ወረዳ 4/ ብ/ኢ/ስ/ ኮሚሽን ስራ አመራር አባላት",
         "titleCommissionChair": "የኮሚሽን ኮሚቴ ሰብሳቢ",
-        "titleOfficeChair": "የአቃቂ ቃሊቲ ወረዳ 3 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ፅ/ቤት ሰብሳቢ",
-        "titleSecretary": "የአቃቂ ቃሊቲ ወረዳ 3 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ፅ/ቤት ፀሀፊና የፅ/ቤት ሀላፊ",
-        "titleInspectionHead": "የአቃቂ ቃሊቲ ወረዳ 3 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ፅ/ቤት የኢንስፔክሽን ዘርፍ ሀላፊ",
-        "titleDeputyChair": "የአቃቂ ቃሊቲ ወረዳ 3 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ቅ/ፅ/ቤት ም/ሰብሳቢ",
+        "titleOfficeChair": "የአቃቂ ቃሊቲ ወረዳ 4 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ፅ/ቤት ሰብሳቢ",
+        "titleSecretary": "የአቃቂ ቃሊቲ ወረዳ 4 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ፅ/ቤት ፀሀፊና የፅ/ቤት ሀላፊ",
+        "titleInspectionHead": "የአቃቂ ቃሊቲ ወረዳ 4 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ፅ/ቤት የኢንስፔክሽን ዘርፍ ሀላፊ",
+        "titleDeputyChair": "የአቃቂ ቃሊቲ ወረዳ 4 ብልፅግና የኢንስፔክሽን የስነ ምግባር ኮሚሽን ቅ/ፅ/ቤት ም/ሰብሳቢ",
         "titleInstitutionChair": "የተቋም ግንባታ ክትትልና ድጋፍ ንዑስ ኮሚቴ ሰብሳቢ",
         "titleRightsChair": "የአካላትና የአባላት መብት ክትትልና ድጋፍ ንዑስ ኮሚቴ ሰብሳቢ",
         "titleFinanceChair": "የፖርቲ ገንዘብ ንብረት ሰነድ ክትትል ድጋፍ ንዑስ ኮሚቴ ሰብሳቢ",
@@ -337,10 +337,10 @@
         "privacy": "ግላዊነት",
         "terms": "ውሎች",
         "allRightsReserved": "ሁሉም መብቶች የተጠበቁ ናቸው",
-        "footerTitle": "የ አቃ/ቃ ክ/ከተማ ወረዳ 3 ብልፅግና ኢንስፔክሽን ስነ ምግባር ኮሚሽን"
+        "footerTitle": "የ አቃ/ቃ ክ/ከተማ ወረዳ 4 ብልፅግና ኢንስፔክሽን ስነ ምግባር ኮሚሽን"
     },
     "navbar": {
-        "title": "የአቃቂ ቃሊቲ ወረዳ 3 ብልፅግና ኢንስፔክሽንና ስነ ምግባር ኮሚሽን",
+        "title": "የአቃቂ ቃሊቲ ወረዳ 4 ብልፅግና ኢንስፔክሽንና ስነ ምግባር ኮሚሽን",
         "motto": "ጠንካራ ኢንስፔክሽን ለጠንካራ ፖርቲ"
     },
     "categories": {

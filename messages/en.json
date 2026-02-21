@@ -9,7 +9,7 @@
         "officialPortal": "Official Portal",
         "authorizedReader": "Authorized Reader",
         "documents": "Documents",
-        "temporaryAccessTitle": "Akaki Kality Woreda 4 Commission Branch Office Documents"
+        "temporaryAccessTitle": "Akaki Kality Woreda 6 Commission Branch Office Documents"
     },
     "admin": {
         "secureAdminPortal": "Secure Admin Portal",
@@ -147,11 +147,11 @@
         "leaderCategory": "Category",
         "photo": "Photo",
         "sortOrder": "Sort Order",
-        "catCommissionChair": "Woreda 4 Prosperity Inspection & Ethics Commission Chairperson",
-        "catCommissionDeputy": "Woreda 4 Prosperity Inspection & Ethics Commission Deputy Chairperson",
-        "catCommissionSecretary": "Woreda 4 Prosperity Inspection & Ethics Commission Secretary",
-        "catCommissionCommitteeMember": "Woreda 4 Prosperity Inspection & Ethics Commission Committee Members",
-        "catCommissionManagement": "Woreda 4 Prosperity Inspection & Ethics Commission Management Members",
+        "catCommissionChair": "Woreda 6 Prosperity Inspection & Ethics Commission Chairperson",
+        "catCommissionDeputy": "Woreda 6 Prosperity Inspection & Ethics Commission Deputy Chairperson",
+        "catCommissionSecretary": "Woreda 6 Prosperity Inspection & Ethics Commission Secretary",
+        "catCommissionCommitteeMember": "Woreda 6 Prosperity Inspection & Ethics Commission Committee Members",
+        "catCommissionManagement": "Woreda 6 Prosperity Inspection & Ethics Commission Management Members",
         "leaderSaved": "Member saved successfully!",
         "leaderUpdated": "Member updated successfully!",
         "leaderCreated": "Member created successfully!",
@@ -203,29 +203,29 @@
         "viewMembers": "View Members",
         "leadersMessage": "Leader's Message",
         "subtitleText": "Strong Inspection for a Strong Party",
-        "mainTitle": "Akaki Kality Woreda 4 Commission Branch Office",
-        "badgeText": "Woreda 4 Good Governance"
+        "mainTitle": "Akaki Kality Woreda 6 Commission Branch Office",
+        "badgeText": "Woreda 6 Good Governance"
     },
     "leaders": {
         "messageFrom": "Message from the Administrator",
         "leaders": "leaders",
         "administratorMessage": "Administrator's Message",
         "administratorPhoto": "Administrator Photo",
-        "membersSubtitle": "Woreda 4 Good Governance Inspection and Ethics Commission Office Members",
-        "catCommissionChair": "Woreda 4 Prosperity Inspection & Ethics Commission Chairperson",
-        "catCommissionDeputy": "Woreda 4 Prosperity Inspection & Ethics Commission Deputy Chairperson",
-        "catCommissionSecretary": "Woreda 4 Prosperity Inspection & Ethics Commission Secretary",
-        "catCommissionCommitteeMember": "Woreda 4 Prosperity Inspection & Ethics Commission Committee Members",
-        "catCommissionManagement": "Woreda 4 Prosperity Inspection & Ethics Commission Management Members",
+        "membersSubtitle": "Woreda 6 Good Governance Inspection and Ethics Commission Office Members",
+        "catCommissionChair": "Woreda 6 Prosperity Inspection & Ethics Commission Chairperson",
+        "catCommissionDeputy": "Woreda 6 Prosperity Inspection & Ethics Commission Deputy Chairperson",
+        "catCommissionSecretary": "Woreda 6 Prosperity Inspection & Ethics Commission Secretary",
+        "catCommissionCommitteeMember": "Woreda 6 Prosperity Inspection & Ethics Commission Committee Members",
+        "catCommissionManagement": "Woreda 6 Prosperity Inspection & Ethics Commission Management Members",
         "titleCommissionChair": "Commission Committee Chairperson",
-        "titleOfficeChair": "Woreda 4 Good Governance Inspection and Ethics Commission Office Chairperson",
-        "titleSecretary": "Woreda 4 Good Governance Inspection and Ethics Commission Office Secretary and Office Head",
-        "titleInspectionHead": "Woreda 4 Good Governance Inspection and Ethics Commission Office Inspection Sector Head",
-        "titleDeputyChair": "Woreda 4 Good Governance Inspection and Ethics Commission Sub-Office Deputy Chairperson",
+        "titleOfficeChair": "Woreda 6 Good Governance Inspection and Ethics Commission Office Chairperson",
+        "titleSecretary": "Woreda 6 Good Governance Inspection and Ethics Commission Office Secretary and Office Head",
+        "titleInspectionHead": "Woreda 6 Good Governance Inspection and Ethics Commission Office Inspection Sector Head",
+        "titleDeputyChair": "Woreda 6 Good Governance Inspection and Ethics Commission Sub-Office Deputy Chairperson",
         "titleInstitutionChair": "Institution Building Monitoring and Support Sub-committee Chairperson",
         "titleRightsChair": "Bodies and Members Rights Monitoring and Support Sub-committee Chairperson",
         "titleFinanceChair": "Party Finance Property Document Monitoring and Support Sub-committee Chairperson",
-        "principalSpeech": "We work with unwavering commitment for the people of Woreda 4. We strive to build a community where every voice is heard, every child receives quality education, and every family feels safe and supported."
+        "principalSpeech": "We work with unwavering commitment for the people of Woreda 6. We strive to build a community where every voice is heard, every child receives quality education, and every family feels safe and supported."
     },
     "documents": {
         "title": "Documents",
@@ -283,10 +283,10 @@
         "privacy": "Privacy",
         "terms": "Terms",
         "allRightsReserved": "All rights reserved",
-        "footerTitle": "Akaki Kality Woreda 4 Commission Branch Office"
+        "footerTitle": "Akaki Kality Woreda 6 Commission Branch Office"
     },
     "navbar": {
-        "title": "Akaki Kality Woreda 4 Prosperity Inspection and Ethics Commission",
+        "title": "Akaki Kality Woreda 6 Prosperity Inspection and Ethics Commission",
         "motto": "Strong Inspection for a Strong Party"
     },
     "categories": {
